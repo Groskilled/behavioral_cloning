@@ -9,7 +9,7 @@ angles = []
 for i in range(len(lines)):
     im = imread('../linux_sim/saved_videos/IMG/' + lines.iloc[i]['center_image'].split('/')[-1])
     images.append(im)
-    images.append(np.flip(im,0))
+    images.append(np.flip(im,1))
     angles.append(lines.iloc[i]['steering_angle'])
     angles.append(-lines.iloc[i]['steering_angle'])
 
